@@ -47,14 +47,13 @@ export class ProductosService {
   private filtrarProductos(termino){
     this.productoFiltrado = [];
     
-    console.log('Voy vacio papi ' + termino)
     termino = termino.toLocaleUpperCase();
 
     this.productos.forEach((prod)=>{
-
       const tituloProducto = prod.titulo.toLocaleUpperCase();
+      const categoriaProducto = prod.categoria.toLocaleUpperCase();
 
-      if(prod.categoria.indexOf(termino) >= 0 || tituloProducto.indexOf(termino) >= 0){
+      if(categoriaProducto.indexOf(termino) >= 0 || tituloProducto.indexOf(termino) >= 0){
           this.productoFiltrado.push(prod);
       }
 
