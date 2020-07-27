@@ -28,10 +28,7 @@ export class InfoPaginaService {
   private cargarEquipo(){
     this._http.get('https://erik-stor-page.firebaseio.com/equipo.json')
     .subscribe((resp: any) => {
-      
       this.equipo = resp;
-      console.log(resp);
-      
     });
   }
 
